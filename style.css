@@ -1,0 +1,145 @@
+/* --- RESET & BASIC --- */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; 
+    font-family: calibri, "segoe ui", arial, tahoma, sans-serif;
+}
+
+body{
+    background-color:#DDDDDD;
+}
+
+/* --- WRAPPER --- */
+#wrapper{
+    width: 1100px; 
+    margin: 0 auto;
+    background: #f9f9f9; 
+    overflow: hidden;
+}
+
+/* --- HEADER --- */
+#header{
+    background: #555;
+    height: 80px;
+    width: 100%;
+    padding: 15px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header img{
+    width: 100px;
+    height: auto;
+}
+
+#menu-utama{
+    display: flex;
+    list-style: none;
+}
+
+#menu-utama li{
+    padding: 0 20px;
+    border-right: 1px solid #777;
+}
+
+#menu-utama li:last-child {
+    border-right: none; /* Menghilangkan garis di menu terakhir */
+}
+
+#menu-utama li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- KONTEN UTAMA --- */
+
+/* Kolom Kiri */
+#daftar-artikel{
+    width: 800px; /* Dikurangi sedikit agar sidebar tidak jatuh */
+    float: left;
+    padding: 20px;
+}
+
+.artikel{
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    /* Menggunakan flex agar konten di dalamnya otomatis sejajar */
+    display: flex; 
+    align-items: flex-start;
+}
+
+/* STYLING GAMBAR */
+.artikel img{
+    width: 250px;      /* Lebar tetap */
+    height: 180px;     /* Tinggi tetap */
+    object-fit: cover; 
+    border-radius: 5px;
+    margin-right: 20px; /* Jarak ke teks di kanannya */
+    flex-shrink: 0;    /* Mencegah gambar menyusut */
+}
+
+/* Pembungkus Teks di dalam artikel */
+.konten-teks {
+    flex-grow: 1;
+}
+
+.artikel h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.artikel b{
+    color: #616060;
+    background: #eee;
+    padding: 4px 8px;
+    font-size: 11px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.artikel p{
+    margin: 15px 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+.artikel a{
+    display: block;
+    text-align: right;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Kolom Kanan: Sidebar */
+#sidebar{
+    width: 300px; /* Diperlebar agar proporsional dengan wrapper 1100px */
+    float: right;
+    padding: 20px;
+    background: #fff;
+    min-height: 500px;
+    border-left: 1px solid #ddd;
+}
+
+#sidebar h2{
+    font-size: 18px;
+    border-bottom: 3px solid #555;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* --- FOOTER --- */
+#footer{
+    clear: both;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
